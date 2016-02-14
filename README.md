@@ -4,8 +4,11 @@ Delphos backend
 
 ## Dependencies
 
+To install all dependencies of deplhos-api just:
+
 ```
-go get github.com/gorilla/mux
-go get golang.org/x/crypto/bcrypt
-go get github.com/onsi/ginkgo/ginkgo
+# -t to include test dependencies
+# -v so we see what's going on
+# ./... is the "recursively" notation for go commands
+go get -v -t ./...
 ```
