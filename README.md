@@ -4,7 +4,7 @@ Delphos backend
 
 ## Dependencies
 
-To install all dependencies of deplhos-api just:
+To install all dependencies of delphos-api just:
 
 ```
 # -t to include test dependencies
