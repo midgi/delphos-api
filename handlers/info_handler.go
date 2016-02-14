@@ -29,6 +29,4 @@ func (h *InfoHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		logger.Error("failed-marshaling-info", err)
 		return
 	}
-
-	w.WriteHeader(http.StatusOK)
 }

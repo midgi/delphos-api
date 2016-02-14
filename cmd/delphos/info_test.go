@@ -19,6 +19,7 @@ var _ = Describe("Info", func() {
 			By("send request to server")
 			resp, err := httpclient.Do(req)
 			Expect(err).NotTo(HaveOccurred())
+			Expect(resp.StatusCode).To(Equal(http.StatusOK))
 
 			By("reading the body")
 			body, err := ioutil.ReadAll(resp.Body)
