@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/midgi/delphos-api/cmd/delphos/testrunner"
+	"github.com/migdi/delphos-api/cmd/delphos/testrunner"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gexec"
@@ -32,7 +32,7 @@ func TestDelphos(t *testing.T) {
 
 var _ = SynchronizedBeforeSuite(
 	func() []byte {
-		delphosConfig, err := gexec.Build("github.com/midgi/delphos-api/cmd/delphos", "-race")
+		delphosConfig, err := gexec.Build("github.com/migdi/delphos-api/cmd/delphos", "-race")
 		Expect(err).NotTo(HaveOccurred())
 		return []byte(delphosConfig)
 	},
