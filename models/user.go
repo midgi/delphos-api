@@ -7,23 +7,23 @@ import (
 
 // User interface
 type User struct {
-	Name     string
-	Email    string
-	Password string
+	name     string
+	email    string
+	password string
 }
 
 // NewUser Create a new User
 func NewUser(name string, email string, password string) (user *User) {
 	return &User{
-		Name:     name,
-		Email:    email,
-		Password: encrypt(password),
+		name:     name,
+		email:    email,
+		password: encrypt(password),
 	}
 }
 
-// GetPassword get user password
-func (user *User) GetPassword() string {
-	return user.Password
+// Password get user password
+func (user *User) Password() string {
+	return user.password
 }
 
 func encrypt(text string) string {
