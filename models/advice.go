@@ -1,32 +1,31 @@
 package models
 
-import (
- "time"
-)
+import "time"
 
 //Advice Interface
 type Advice struct {
-	Id 		string
-	Content	string
-	AdviceRequester User
-	CreatedAt	time.Time
+	id              string
+	content         string
+	adviceRequester User
+	createdAt       time.Time
 }
 
-//New Advice
+// NewAdvice new advice
 func NewAdvice(id string, content string, adviceRequester User) (advice *Advice) {
 	return &Advice{
-		Id:					id,
-		Content:				content,
-		AdviceRequester: 	adviceRequester,
-		CreatedAt: 			time.Now(),
+		id:              id,
+		content:         content,
+		adviceRequester: adviceRequester,
+		createdAt:       time.Now(),
 	}
-	
 }
 
-func (advice *Advice) GetId() string {
-	return advice.Id
+// ID returns advice id
+func (advice *Advice) ID() string {
+	return advice.id
 }
 
-func (advice *Advice) GetContent() string {
-	return advice.Content
+// Content returns content
+func (advice *Advice) Content() string {
+	return advice.content
 }

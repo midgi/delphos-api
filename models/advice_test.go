@@ -12,8 +12,8 @@ var _ = Describe("Advice", func() {
 		It("must return advice model attrs", func() {
 			user := NewUser("Foo", "bar@bar.com", "foobar123")
 			advice := NewAdvice("id", "Content of Advice", *user)
-			Expect(advice.GetId()).To(Equal("id"))
-			Expect(advice.GetContent()).To(Equal("Content of Advice"))
+			Expect(advice.ID()).To(Equal("id"))
+			Expect(advice.Content()).To(Equal("Content of Advice"))
 		})
 	})
 })
