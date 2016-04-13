@@ -1,6 +1,13 @@
 # delphos-api
 
 Delphos backend
+## getting start
+
+go get -v -t github.com/migdi/delphos-api/...
+
+#It will put inside the $GOPATH folder.
+
+
 
 ## Dependencies
 
