@@ -7,6 +7,7 @@ import (
 
 // User interface
 type User struct {
+	id 		 int
 	name     string
 	email    string
 	password string
@@ -21,10 +22,32 @@ func NewUser(name string, email string, password string) (user *User) {
 	}
 }
 
+
+// get the user Id
+func (user *User) SetId(id int)  {
+	user.id = id
+}
+
+// get the user Id
+func (user *User) Id() int {
+	return user.id
+}
+
 // Password get user password
 func (user *User) Password() string {
 	return user.password
 }
+
+// Password get user password
+func (user *User) Email() string {
+	return user.email
+}
+
+// get user name
+func (user *User) Name() string {
+	return user.name
+}
+
 
 func encrypt(text string) string {
 	key, _ := bcrypt.GenerateFromPassword([]byte(text), bcrypt.DefaultCost)

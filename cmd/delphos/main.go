@@ -58,10 +58,13 @@ func main() {
 
 func configureRouter(logger lager.Logger) http.Handler {
 	infoHandler := handlers.NewInfoHandler(logger)
+	signupHandler := handlers.NewSignupHandler(logger)
 
 	router := mux.NewRouter().StrictSlash(true)
 	// router.HandleFunc("/user", UserHandler)
 	router.Handle("/info", infoHandler)
+    router.Handle("/signup/facebook", signupHandler)
+
 	return router
 }
 
